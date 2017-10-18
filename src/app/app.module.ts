@@ -15,6 +15,7 @@ import { routedComponents, AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 
 import { USER_PROVIDER, USERS_API } from './users';
+import { StockMarketDashboardComponent } from './stock-market-dashboard/stock-market-dashboard.component';
 
 const httpInterceptorProviders: Type<any>[] = [
   RequestInterceptor,
@@ -28,6 +29,7 @@ export function getAPI(): string {
   declarations: [
     AppComponent,
     routedComponents,
+    StockMarketDashboardComponent,
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     AppRoutingModule,

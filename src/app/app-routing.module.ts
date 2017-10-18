@@ -13,16 +13,22 @@ import { DetailComponent } from './detail/detail.component';
 import { LoginComponent } from './login/login.component';
 import { FormComponent } from './form/form.component';
 
+import { StockMarketDashboardComponent } from './stock-market-dashboard/stock-market-dashboard.component';
+
 const routes: Routes = [
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
     },
     {
         path: '',
         component: MainComponent,
         children: [
-            {
+          {
+            component: StockMarketDashboardComponent,
+            path: 'stock-market-dashboard',
+          },
+          {
                 component: DashboardComponent,
                 path: '',
             },
@@ -32,11 +38,11 @@ const routes: Routes = [
                 children: [
                     {
                         path: '',
-                        component: ProductOverviewComponent
+                        component: ProductOverviewComponent,
                     },
                     {
                         path: 'stats',
-                        component: ProductStatsComponent
+                        component: ProductStatsComponent,
                     },
                     {
                         path: 'features',
